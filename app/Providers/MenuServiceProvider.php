@@ -28,4 +28,10 @@ class MenuServiceProvider extends ServiceProvider
     // Share all menuData to all the views
     $this->app->make('view')->share('menuData', [$verticalMenuData]);
   }
+
+
+//  $db = Post::find(32);
+//  // ddaay laf kieeur tuwf db - kieeu dooi tuong
+//   $dbConvertToJson = json_encode($db);
+
 }
