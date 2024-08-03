@@ -75,10 +75,4 @@
 
 
 </aside>
-<?php
-//    -------- maaux--------
-$verticalContentJson = file_get_contents(base_path('resources/content/verticalMenu.json'));
-$verticalContentData = json_decode($verticalContentJson);
-dd($verticalContentData);
-//    ------------end maaux---------
-?>
+

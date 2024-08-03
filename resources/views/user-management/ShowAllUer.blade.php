@@ -9,6 +9,6 @@
 @section('content')
 
   @include('content.tables.tables-basic')
-  <div class=""></div>
+
 
 @endsection

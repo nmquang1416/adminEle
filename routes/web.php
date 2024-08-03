@@ -46,7 +46,7 @@ use App\Http\Controllers\tables\Basic as TablesBasic;
 use App\Http\Controllers\UserManagement\ShowAllUserController as showAllUserController;
 
 //Route User Management
-Route::get('/user-management/show-all-user', ([showAllUserController::class, 'index']) );
+Route::get('/user-management/show-all-user', ([showAllUserController::class, 'index']));
 
 // Main Page Route
 Route::get('/', [Analytics::class, 'index'])->name('dashboard-analytics');

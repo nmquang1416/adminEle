@@ -10,7 +10,7 @@
       ],
       "submenu": [
         {
-          "url": "/",
+          "url": "/user-management/show-all-user",
           "name": "Show All User",
           "slug": "laravel-example-user-management",
           "target": "_blank"
