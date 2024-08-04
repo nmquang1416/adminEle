@@ -30,6 +30,8 @@ class MenuServiceProvider extends ServiceProvider
   }
 
 
+
+
 //  $db = Post::find(32);
 //  // ddaay laf kieeur tuwf db - kieeu dooi tuong
 //   $dbConvertToJson = json_encode($db);

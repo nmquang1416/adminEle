@@ -8,7 +8,6 @@
 
 @section('content')
 
-  @include('content.tables.tables-basic')
-
+  @include('backend-ui.user-management.table-show-all')
 
 @endsection

@@ -2,6 +2,9 @@
 * demo.css
 * File include item demo only specific css only
 ******************************************************************************/
+.pagination{
+  justify-content: center;
+}
 
 .menu .app-brand.demo {
   height: 64px;
