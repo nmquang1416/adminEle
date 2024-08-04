@@ -28,7 +28,7 @@
           <h5 class="mb-0">Add new user</h5> <small class="text-muted float-end"></small>
         </div>
         <div class="card-body">
-          <form method="post" action="{{url('user-management/add-new-user')}}" name="add-user" onsubmit="return validateForm()">
+          <form method="post" action="{{url("/user-management/add-new-user")}}" name="add-user" onsubmit="return validateForm()">
             {{csrf_field()}}
             <div class="row mb-6">
               <label class="col-sm-2 col-form-label" for="basic-default-user-name">User Name</label>
@@ -94,9 +94,11 @@
               </div>
             </div>
             <div class="row justify-content-end">
+
               <div class="col-sm-10">
                 <button type="submit" class="btn btn-primary">Send</button>
               </div>
+
             </div>
           </form>
         </div>

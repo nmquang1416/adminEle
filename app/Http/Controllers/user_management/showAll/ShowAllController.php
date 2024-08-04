@@ -9,7 +9,7 @@ class ShowAllController extends Controller
 {
     //
   public function index(){
-    $users = User::all();
+    $users = User::all()->where("status", 1);
     return $users;
   }
 }

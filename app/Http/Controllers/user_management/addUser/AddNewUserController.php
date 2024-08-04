@@ -15,8 +15,7 @@ use App\Http\Controllers\StoreProductRequest;
 
 class AddNewUserController extends Controller
 {
-    public function index(StoreFormRequest $request){
-      $validated = $request->validated();
+    public function index(){
 
       $dt = Carbon::now();
       $dateNow = $dt->toDateTimeString();
@@ -44,6 +43,6 @@ class AddNewUserController extends Controller
 
       $user -> save();
 
-        return view("/user-management/success-page");
+        return view("user-management.successPage");
     }
 }

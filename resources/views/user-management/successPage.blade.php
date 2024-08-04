@@ -120,7 +120,7 @@
           <p class="text-center">Your booking has been confirmed. Check your email for detials.</p>
         </div>
         <div class="modal-footer">
-          <button href="{{url("user-management/add-new-userUI")}}" class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+          <button onclick="window.location.href='{{ url('/user-management/add-new-userUI')}}'" class="btn btn-success btn-block" data-dismiss="modal">OK</button>
         </div>
       </div>
     </div>

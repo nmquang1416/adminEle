@@ -7,6 +7,6 @@ use App\Http\Controllers\Controller;
 class SuccessController extends Controller
 {
     public function index(){
-      return view('/user-management/successPage');
+      return view('user-management.successPage');
     }
 }
