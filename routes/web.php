@@ -63,7 +63,7 @@ Route::get('/user', function (){
 Route::get('/user-management/show-all-user', ([showAllUserControllerUI::class, 'index']));
 Route::get('/user-management/show-all-user-function', ([showAllUserController::class, 'index']));
 //add
-Route::get("/user-management/add-new-userUI", ([addNewUserControllerUI::class, "index"]));
+  Route::get("/user-management/add-new-userUI", ([addNewUserControllerUI::class, "index"]));
 Route::post("/user-management/add-new-user", ([addNewUserController::class, "index"]));
 Route::get("/user-management/success-page", ([SuccessControllerUI::class, "index"]));
 

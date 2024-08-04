@@ -44,6 +44,6 @@ class AddNewUserController extends Controller
 
       $user -> save();
 
-        return redirect("/user-management/success-page");
+        return view("/user-management/success-page");
     }
 }
