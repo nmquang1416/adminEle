@@ -43,12 +43,29 @@ use App\Http\Controllers\user_interface\Toasts;
 use App\Http\Controllers\user_interface\TooltipsPopovers;
 use App\Http\Controllers\user_interface\Typography;
 
+use App\Http\Controllers\user_management\EditUser\EditUserController as EditUserController;
+
 use App\Http\Controllers\user_management\showAll\ShowAllControllerUI as showAllUserControllerUI;
 use App\Http\Controllers\user_management\showAll\ShowAllController as showAllUserController;
 
 use App\Http\Controllers\user_management\addUser\AddNewUserControllerUI as addNewUserControllerUI;
 use App\Http\Controllers\user_management\addUser\AddNewUserController as addNewUserController;
 use App\Http\Controllers\user_management\addUser\SuccessController as SuccessControllerUI;
+
+use App\Http\Controllers\user_management\sort_by\SortByAccountIdController as SortByAccountIdController;
+use App\Http\Controllers\user_management\sort_by\SortByAccountIdControllerUI as SortByAccountIdControllerUI;
+
+use App\Http\Controllers\user_management\sort_by\SortByUserFirstNameController as SortByUserFirstNameController;
+use App\Http\Controllers\user_management\sort_by\SortByUserFirstNameControllerUI as SortByUserFirstNameControllerUI;
+
+use App\Http\Controllers\user_management\sort_by\SortByUserLastNameController as SortByUserLastNameController;
+use App\Http\Controllers\user_management\sort_by\SortByUserLastNameControllerUI as SortByUserLastNameControllerUI;
+
+use App\Http\Controllers\user_management\sort_by\SortByUserBirthController as SortByUserBirthController;
+use App\Http\Controllers\user_management\sort_by\SortByUserBirthControllerUI as SortByUserBirthControllerUI;
+
+use App\Http\Controllers\user_management\sort_by\SortByUserNameController as SortByUserNameController;
+use App\Http\Controllers\user_management\sort_by\SortByUserNameControllerUI as SortByUserNameControllerUI;
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Admin;
@@ -59,11 +76,30 @@ Route::get('/user', function (){
     return ['password' => bcrypt($admin->password)];
 });
 
+Route::get('/find',([EditUserController::class, 'index']));
+
 //Route User Management show
 Route::get('/user-management/show-all-user', ([showAllUserControllerUI::class, 'index']));
 Route::get('/user-management/show-all-user-function', ([showAllUserController::class, 'index']));
+
+//Sort
+Route::get("/sort-by-account-id", ([SortByAccountIdController::class, 'index']));
+Route::get("/sort-by-account-id-ui", ([SortByAccountIdControllerUI::class, 'index']));
+
+Route::get("/sort-by-birth", ([SortByUserBirthController::class, 'index']));
+Route::get("/sort-by-birth-ui", ([SortByUserBirthControllerUI::class, 'index']));
+
+Route::get("/sort-by-first-name", ([SortByUserFirstNameController::class, 'index']));
+Route::get("/sort-by-first-name-ui", ([SortByUserFirstNameControllerUI::class, 'index']));
+
+Route::get("/sort-by-last-name", ([SortByUserLastNameController::class, 'index']));
+Route::get("/sort-by-last-name-ui", ([SortByUserLastNameControllerUI::class, 'index']));
+
+Route::get("/sort-by-user-name", ([SortByUserNameController::class, 'index']));
+Route::get("/sort-by-user-name-ui", ([SortByUserNameControllerUI::class, 'index']));
+
 //add
-  Route::get("/user-management/add-new-userUI", ([addNewUserControllerUI::class, "index"]));
+Route::get("/user-management/add-new-userUI", ([addNewUserControllerUI::class, "index"]));
 Route::post("/user-management/add-new-user", ([addNewUserController::class, "index"]));
 Route::get("/user-management/success-page", ([SuccessControllerUI::class, "index"]));
 

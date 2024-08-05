@@ -42,7 +42,6 @@ class AddNewUserController extends Controller
       $user -> deleted_by = $user->user_name;
 
       $user -> save();
-
         return view("user-management.successPage");
     }
 }
